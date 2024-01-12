@@ -88,7 +88,5 @@ public struct Millimeter
     public static explicit operator Millimeter(Micrometer b){
         return new Millimeter(b.units / 1_000);
     }
-
-
 }
 
