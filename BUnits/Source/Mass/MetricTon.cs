@@ -75,6 +75,19 @@ public struct MetricTon
     public static implicit operator MetricTon(int b){
         return new MetricTon(b);
     }
+
+    public static explicit operator MetricTon(Kilogram b){
+        return new MetricTon(b.units/1_000);
+    }
+    public static explicit operator MetricTon(Gram b){
+        return new MetricTon(b.units/1_000_000);
+    }
+    public static explicit operator MetricTon(Milligram b){
+        return new MetricTon(b.units/1_000_000_000);
+    }
+    public static explicit operator MetricTon(Microgram b){
+        return new MetricTon(b.units/1_000_000_000_000);
+    }
 }
 
 

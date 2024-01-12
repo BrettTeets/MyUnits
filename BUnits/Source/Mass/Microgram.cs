@@ -75,6 +75,20 @@ public struct Microgram
     public static implicit operator Microgram(int b){
         return new Microgram(b);
     }
+
+    public static explicit operator Microgram(MetricTon b){
+        return new Microgram(b.units*1_000_000_000_000);
+    }
+    public static explicit operator Microgram(Kilogram b){
+        return new Microgram(b.units*1_000_000_000);
+    }
+    public static explicit operator Microgram(Gram b){
+        return new Microgram(b.units*1_000_000);
+    }
+    public static explicit operator Microgram(Milligram b){
+        return new Microgram(b.units*1_000);
+    }
+    
 }
 
 

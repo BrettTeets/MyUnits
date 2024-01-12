@@ -75,6 +75,19 @@ public struct Kilogram
     public static implicit operator Kilogram(int b){
         return new Kilogram(b);
     }
+
+    public static explicit operator Kilogram(MetricTon b){
+        return new Kilogram(b.units*1_000);
+    }
+    public static explicit operator Kilogram(Gram b){
+        return new Kilogram(b.units/1_000);
+    }
+    public static explicit operator Kilogram(Milligram b){
+        return new Kilogram(b.units/1_000_000);
+    }
+    public static explicit operator Kilogram(Microgram b){
+        return new Kilogram(b.units/1_000_000_000);
+    }
 }
 
 

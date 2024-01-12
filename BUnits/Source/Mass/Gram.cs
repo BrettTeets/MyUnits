@@ -75,6 +75,19 @@ public struct Gram
     public static implicit operator Gram(int b){
         return new Gram(b);
     }
+
+    public static explicit operator Gram(MetricTon b){
+        return new Gram(b.units*1_000_000);
+    }
+    public static explicit operator Gram(Kilogram b){
+        return new Gram(b.units*1_000);
+    }
+    public static explicit operator Gram(Milligram b){
+        return new Gram(b.units/1_000);
+    }
+    public static explicit operator Gram(Microgram b){
+        return new Gram(b.units/1_000_000);
+    }
 }
 
 
