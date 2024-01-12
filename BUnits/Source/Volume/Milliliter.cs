@@ -75,6 +75,13 @@ public struct Milliliter
     public static implicit operator Milliliter(int b){
         return new Milliliter(b);
     }
+
+    public static explicit operator Milliliter(Liter b){
+        return new Milliliter(b.units*1_000);
+    }
+    public static explicit operator Milliliter(Microliter b){
+        return new Milliliter(b.units/1_000);
+    }
 }
 
 

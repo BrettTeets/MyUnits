@@ -75,6 +75,13 @@ public struct Liter
     public static implicit operator Liter(int b){
         return new Liter(b);
     }
+
+    public static explicit operator Liter(Milliliter b){
+        return new Liter(b.units/1_000);
+    }
+    public static explicit operator Liter(Microliter b){
+        return new Liter(b.units/1_000_000);
+    }
 }
 
 

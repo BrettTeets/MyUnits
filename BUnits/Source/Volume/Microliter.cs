@@ -75,6 +75,14 @@ public struct Microliter
     public static implicit operator Microliter(int b){
         return new Microliter(b);
     }
+
+    public static explicit operator Microliter(Liter b){
+        return new Microliter(b.units*1_000_000);
+    }
+    public static explicit operator Microliter(Milliliter b){
+        return new Microliter(b.units*1_000);
+    }
+    
 }
 
 
